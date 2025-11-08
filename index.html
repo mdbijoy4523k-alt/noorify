@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Noorify — Online Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <!-- Inline SVG logo (separate file also provided) -->
+        <img src="logo.svg" alt="Noorify logo" class="logo">
+        <span class="brand-name">Noorify</span>
+      </div>
+
+      <nav class="main-nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Shop</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <input type="search" class="search" placeholder="Search" aria-label="Search">
+        <button class="lang-toggle" id="langToggle">বাংলা</button>
+        <button class="cart-btn" aria-label="Cart">🛒</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text" id="heroText">
+          <h1 class="offer-title">নতুন অফারে<br><span class="large">60% ছাড়</span></h1>
+          <p class="hero-sub">শুধু সীমিত সময়ের জন্য — এখনই চেক করুন</p>
+          <a class="btn-primary" href="#">এখনই কিনুন</a>
+        </div>
+        <div class="hero-illus">
+          <!-- Simple shopping illustration as SVG -->
+          <svg viewBox="0 0 200 200" class="illus" aria-hidden="true">
+            <g fill="none" stroke="none">
+              <rect width="200" height="200" rx="12" fill="#FFFFFF00"></rect>
+              <g transform="translate(10,20)">
+                <rect x="0" y="90" width="120" height="8" rx="4" fill="#183B6B" opacity="0.1"></rect>
+                <path d="M6 8h12l18 64h62l18-40" stroke="#183B6B" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                <circle cx="40" cy="78" r="6" fill="#183B6B"></circle>
+                <circle cx="98" cy="78" r="6" fill="#183B6B"></circle>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories container">
+      <h2 class="section-title" id="catTitle">Categories</h2>
+      <div class="cat-grid">
+        <div class="cat-card"><span class="icon">👔</span><span class="cat-name">Men</span></div>
+        <div class="cat-card"><span class="icon">👗</span><span class="cat-name">Women</span></div>
+        <div class="cat-card"><span class="icon">💻</span><span class="cat-name">Electronics</span></div>
+        <div class="cat-card"><span class="icon">🏠</span><span class="cat-name">Home</span></div>
+      </div>
+    </section>
+
+    <section class="featured container">
+      <h2 class="section-title" id="featuredTitle">Featured Products</h2>
+      <div class="products-grid">
+        <article class="product">
+          <div class="thumb" aria-hidden="true">T</div>
+          <h3 class="p-title">T-Shirt</h3>
+          <div class="price">$500</div>
+        </article>
+
+        <article class="product">
+          <div class="thumb" aria-hidden="true">W</div>
+          <h3 class="p-title">Wrist Watch</h3>
+          <div class="price">$1,800</div>
+        </article>
+
+        <article class="product">
+          <div class="thumb" aria-hidden="true">H</div>
+          <h3 class="p-title">Headphones</h3>
+          <div class="price">$1,800</div>
+        </article>
+
+        <article class="product">
+          <div class="thumb" aria-hidden="true">P</div>
+          <h3 class="p-title">Potted Plant</h3>
+          <div class="price">$300</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="reviews container">
+      <h2 class="section-title" id="reviewsTitle">Customer Reviews</h2>
+      <div class="reviews-grid">
+        <blockquote class="review">"Great quality and fast delivery!"</blockquote>
+        <blockquote class="review">"Nice packaging and good prices."</blockquote>
+        <blockquote class="review">"Highly recommended store."</blockquote>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <strong>Noorify</strong>
+        <p>All rights reserved © Noorify</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>email@example.com</p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <p>Facebook · Instagram · X</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
