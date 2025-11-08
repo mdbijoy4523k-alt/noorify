@@ -1,0 +1,92 @@
+/* styles.css - Noorify simple responsive e-commerce layout */
+/* Fonts: Playfair Display for headings (classic feel), Inter for UI */
+/* Color system: navy (#183B6B), warm gold (#E3B659), white, light gray */
+
+:root{
+  --navy: #183B6B;
+  --gold: #E3B659;
+  --bg: #ffffff;
+  --muted: #6b7280;
+  --radius: 12px;
+  --container: 1100px;
+  --gap: 18px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#0b1220;line-height:1.4}
+
+.container{max-width:var(--container);margin:0 auto;padding:0 20px}
+
+.site-header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:20}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:44px;height:44px}
+.brand-name{font-family:'Playfair Display',serif;font-weight:600;font-size:20px;color:var(--navy)}
+
+.main-nav{display:flex;gap:20px;align-items:center}
+.main-nav a{color:#223; text-decoration:none;font-weight:500;opacity:0.9}
+
+.header-actions{display:flex;align-items:center;gap:10px}
+.search{padding:8px 12px;border-radius:999px;border:1px solid #e6e6e6;min-width:140px}
+.lang-toggle{background:transparent;border:1px solid #e6e6e6;padding:8px 10px;border-radius:8px;cursor:pointer}
+.cart-btn{background:var(--navy);color:#fff;border:none;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:16px}
+
+/* Hero */
+.hero{background:linear-gradient(0deg,#ffffff00,#ffffff00);padding:28px 0 10px}
+.hero-inner{display:flex;align-items:center;gap:40px;flex-wrap:wrap;padding:18px 0}
+.hero-text{flex:1;min-width:260px}
+.offer-title{font-family:'Playfair Display',serif;color:var(--navy);font-size:36px;margin:0;line-height:1}
+.offer-title .large{font-size:56px;color:var(--gold);display:block}
+.hero-sub{color:var(--muted);margin:12px 0 18px}
+.btn-primary{display:inline-block;background:var(--gold);color:#083; padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:600;color:#102;box-shadow:0 6px 18px rgba(24,59,107,0.06)}
+
+/* Hero illustration */
+.hero-illus{width:220px;flex:0 0 220px;display:flex;align-items:center;justify-content:center}
+
+/* Sections */
+.section-title{font-family:'Playfair Display',serif;color:var(--navy);font-size:22px;margin:26px 0 12px}
+.categories{padding-top:6px;padding-bottom:0}
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cat-card{background:#fff;border:1px solid #f0f0f0;padding:14px;border-radius:12px;display:flex;gap:10px;align-items:center;justify-content:center;flex-direction:column;min-height:84px}
+.cat-card .icon{font-size:22px}
+.cat-name{margin-top:6px;font-weight:600;color:#14263a}
+
+/* Products */
+.products-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:18px}
+.product{background:#fff;border-radius:12px;padding:14px;border:1px solid #f4f4f4;text-align:center}
+.thumb{height:120px;border-radius:8px;background:linear-gradient(180deg,#f6f8fb,#fff);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--navy);font-size:34px;margin-bottom:12px}
+.p-title{margin:6px 0 8px;font-weight:600}
+.price{color:var(--gold);font-weight:700}
+
+/* Reviews */
+.reviews-grid{display:flex;gap:12px;flex-wrap:wrap}
+.review{background:#fff;padding:12px;border-radius:10px;border:1px solid #f0f0f0;flex:1;min-width:180px}
+
+/* Footer */
+.site-footer{border-top:1px solid #eee;margin-top:24px;background:#fff;padding:18px 0}
+.footer-inner{display:flex;gap:20px;align-items:flex-start;justify-content:space-between}
+.footer-col{min-width:120px}
+
+/* Responsive */
+@media (max-width:900px){
+  .main-nav{display:none}
+  .hero-inner{padding:12px 0}
+  .hero-illus{order:2;flex-basis:100%;width:100%}
+  .hero-text{flex-basis:100%}
+  .cat-grid{grid-template-columns:repeat(3,1fr)}
+  .products-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-inner{flex-direction:column;gap:12px}
+}
+
+@media (max-width:480px){
+  .header-inner{padding:12px 0}
+  .brand-name{font-size:18px}
+  .offer-title{font-size:22px}
+  .offer-title .large{font-size:34px}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .products-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-illus{display:none}
+  .search{display:none}
+  .container{padding:0 14px}
+}
